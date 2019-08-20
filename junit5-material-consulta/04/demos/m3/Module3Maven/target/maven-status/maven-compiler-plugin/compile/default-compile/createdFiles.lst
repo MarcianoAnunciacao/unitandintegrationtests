@@ -1,0 +1,7 @@
+com\wiredbraincoffee\reward\RewardByGiftService.class
+com\wiredbraincoffee\product\SpecialProductsEnum.class
+com\wiredbraincoffee\product\Product.class
+com\wiredbraincoffee\reward\RewardService.class
+com\wiredbraincoffee\reward\RewardByConversionService.class
+com\wiredbraincoffee\reward\RewardByDiscountService.class
+com\wiredbraincoffee\reward\RewardInformation.class
