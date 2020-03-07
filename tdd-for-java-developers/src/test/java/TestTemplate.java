@@ -3,7 +3,9 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.exception.MissingValueException;
+
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 
 public class TestTemplate {
@@ -45,10 +47,16 @@ public class TestTemplate {
         assertTemplateEvaluateTo("1, 2, 3");
     }
 
-    @Test(expected = MissingValueException.class)
+    @Test
     public void missingValueRaisesException() throws Exception {
+        try {
             new Template("${foo}").evaluate();
-     }
+            fail("evaluate() shoud throw an exception if "
+                    + "a variable was left without a value!");
+        }catch (MissingValueException expected){
+            assertEquals("No value for ${foo}", expected.getMessage());
+        }
+    }
 
     private void assertTemplateEvaluateTo(String expected) {
         assertEquals(expected, template.evaluate());
