@@ -1,2 +1,2 @@
-# unitandintegrationtests
-Repostitório com testes unitários, integrados e TDD
+# Unit and Integration Tests
+Repository to study TDD
